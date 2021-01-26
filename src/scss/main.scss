@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*, button, input {
+    border: 0;
+    outline: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html, body, #app{
+    height: 100%;
+    margin: 0;
+}
+
+:root{
+    --primary: #007F5F;
+    --secondary: #2B9348;
+    --tertiary: #55A630;
+    --quarternary: #80B918;
+    --quinary: #AACC00;
+    --senary: #BFD200;
+
+    --white: #fff;
+    --grey: #8a8c90;
+    --symbol: #D4D700;
+
+    --link: #DDDF00;
+    --yellow: #FFFF3F;
+
+}
