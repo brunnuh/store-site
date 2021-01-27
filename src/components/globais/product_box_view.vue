@@ -1,11 +1,12 @@
 <template>
     <div class="product-box-view">
-        <img src="../../assets/perfume.png" alt="imagem do produto tal" />
+        <img v-if="image != undefined" :src="image" alt="imagem do produto tal" />
+        <img v-else :src="image" alt="imagem do produto tal" />
         <div class="details-product">
-            <strong class="name">FRESH SUGAR LIP BALM</strong>
+            <strong class="name">{{name}}</strong>
             <div class="stars"></div>
             <div class="price">
-                R$12.31
+                R$ {{price}}
             </div>
         </div>
     </div>
@@ -13,7 +14,14 @@
 
 <script>
 export default {
-
+    props: {
+        name: String,
+        price: Number,
+        image: String
+    },
+    mounted(){
+        console.log(this.image)
+    }
 }
 </script>
 

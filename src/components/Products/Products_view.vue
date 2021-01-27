@@ -1,28 +1,49 @@
 <template>
     <div class="products-view">
-        <ProductBox />
-        <ProductBox />
-        <ProductBox />
-        <ProductBox />
+        <ProductBox 
+            v-for="product in products" :key="product.id" 
+                :name="product.name"
+                :price="product.price"
+                :image="product.images[0].url"
+        />
     </div>
 </template>
 
 <script>
 import ProductBox from '../globais/product_box_view';
+import Api from '../../api/api';
+
+
 export default {
     components: {
         ProductBox
-    }
+    },
+
+    mounted(){
+        Api.getProducts().then(response => {
+            this.products = response.data.data;
+            console.log(this.products[0].images[0].url);
+        })
+    },
+
+    data() {
+        return {
+            products : [
+
+            ]
+        }
+    },
 }
 </script>
 
 <style scoped lang="scss">
     .products-view{
         grid-area: PD;
-        justify-content: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        margin: 0 230px;
+        justify-items: center;
         align-items: center;
-        display: flex;
-        flex-direction: row;
-        height: 300px;
+        grid-row-gap: 20px;
     }
 </style>

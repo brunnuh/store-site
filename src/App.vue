@@ -35,7 +35,7 @@ export default {
   justify-content: center;
 
   grid-template-columns: 1fr;
-  grid-template-rows: 82px 700px auto 380px 90px;
+  grid-template-rows: 82px 700px auto auto 90px;
   grid-template-areas: 
     "HD"
     "BB"

@@ -1,5 +1,5 @@
 <template>
-  <div class="header-view">
+  <header class="header-view">
       <div class="logo">
           <a href="#">
               <img src="../../assets/logo.png" alt="logo da loja">
@@ -13,7 +13,7 @@
               <li>Contato</li>
           </ul>
       </div>
-  </div>
+  </header>
 </template>
 
 <script>
@@ -27,7 +27,11 @@ export default {
        grid-area: HD;
        background-color: var(--white);
        display: flex;
-       
+       position: fixed;
+       left: 0;
+       widows: 100%;
+       height: 70px;
+       right: 0;
        justify-content: space-between;
        align-items: center;
        padding-bottom: 10px;

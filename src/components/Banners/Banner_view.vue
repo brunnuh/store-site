@@ -1,5 +1,5 @@
 <template>
-    <div class="banner-view">
+    <section class="banner-view">
         <div class="best-seller">
 
         </div>
@@ -16,7 +16,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 </template>
 
 <script>

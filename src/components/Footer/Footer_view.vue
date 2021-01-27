@@ -1,16 +1,12 @@
 <template>
-    <div class="footer-view">
-        <div class="sociais-midias">
-            <faceIcon />
-            <googleIcon/>
-            <youtubeIcon/>
-        </div>
+    <footer class="footer-view">
+    
         <div class="coprigth">
             <span>
                 © {{year()}} Vue. All rights Reserved.
             </span>
         </div>
-    </div>
+    </footer>
 </template>
 
 <script>
@@ -43,7 +39,7 @@ export default {
         align-items: center;
         height: 100%;
         background-color: rgb(34, 33, 33);
-        
+        margin-top: 50px;
         .sociais-midias > span{
             margin: 4px;
         }
