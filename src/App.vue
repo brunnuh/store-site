@@ -1,10 +1,15 @@
 <template>
   <div id="app">
       <HeaderComponent />
+
       <BannersComponent />
 
       <ProductsComponent />
 
+      <ContactUsComponent />
+
+      <AboutUsComponent />
+    
       <FooterComponent />
   </div>
 </template>
@@ -14,7 +19,8 @@ import HeaderComponent from './components/Header/header_view';
 import BannersComponent from './components/Banners/Banner_view';
 import ProductsComponent from './components/Products/Products_view';
 import FooterComponent from './components/Footer/Footer_view';
-
+import ContactUsComponent from './components/ContactUs/ContactUs_view';
+import AboutUsComponent from './components/AboutUs/AboutUs_view';
 
 export default {
   name: 'App',
@@ -22,9 +28,12 @@ export default {
     HeaderComponent,
     BannersComponent,
     ProductsComponent,
-    FooterComponent
+    FooterComponent,
+    ContactUsComponent,
+    AboutUsComponent
   }
 }
+ 
 </script>
 
 <style scoped lang="scss">
@@ -35,13 +44,16 @@ export default {
   justify-content: center;
 
   grid-template-columns: 1fr;
-  grid-template-rows: 82px 700px auto auto 90px;
+  grid-template-rows: 82px 700px auto 500px 500px 90px;
   grid-template-areas: 
     "HD"
     "BB"
     "PD"
     "AB"
+    "CT"
     "FT"
   ;
+ 
 }
+
 </style>

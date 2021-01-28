@@ -15,7 +15,8 @@
     "sass-loader": "^10.1.1",
     "vue": "^2.6.11",
     "vue-axios": "^3.2.2",
-    "vue-material-design-icons": "^4.11.0"
+    "vue-material-design-icons": "^4.11.0",
+    "vue-scrollto": "^2.20.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",

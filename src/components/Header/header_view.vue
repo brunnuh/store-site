@@ -7,10 +7,10 @@
       </div>
       <div class="nav-bar">
           <ul>
-              <li>Home</li>
-              <li>Produtos</li>
-              <li>Sobre</li>
-              <li>Contato</li>
+              <li v-scroll-to="{element: '#part-header', offset: -250,}"><a >Home</a></li>
+              <li v-scroll-to="{element: '#products-view', offset: -100,}"><a>Produtos</a></li>
+              <li v-scroll-to="{element: '#aboutus', offset: -100}"><a >Sobre</a></li>
+              <li v-scroll-to="{element: '#contactUs'}"><a >Contatos</a></li>
           </ul>
       </div>
   </header>
@@ -25,11 +25,11 @@ export default {
 <style scoped lang="scss">
    .header-view{ /** corpo principal */
        grid-area: HD;
-       background-color: var(--white);
+       background-color: var(--white) ;
        display: flex;
        position: fixed;
        left: 0;
-       widows: 100%;
+       width: 100%;
        height: 70px;
        right: 0;
        justify-content: space-between;
@@ -37,7 +37,7 @@ export default {
        padding-bottom: 10px;
        box-shadow: 0 14px 28px rgba(155, 154, 154, 0.25);
        
-
+    
 
         /**Logo */
         .logo > a > img{
@@ -49,12 +49,33 @@ export default {
        .nav-bar > ul{
             display: flex;
             padding-right: 100px;
+           
             li{
-                padding-right: 10px;
-                list-style-type: none;
+                display: flex;    
+                cursor: pointer;
+                align-items: center;
+                justify-content: center;
+                width: 80px;
+                height: 30px;
+                transition: 0.6s;
+                
+                &:hover{
+                    background-color: var(--secondary);
+                    color: white;
+                    border: var(--secondary) solid 1px;
+                    border-radius: 5px;
+                    
+                    &:hover > a {
+                        color: white;
+                    }
+                }
+            }
+            a{
+                text-decoration: none;
                 font-size: 14.5px;
-                color: var(--grey);
+                color: var(--primary);
                 font-weight: bold;
+               
             }
        }
    }

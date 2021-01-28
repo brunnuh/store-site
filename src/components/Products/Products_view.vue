@@ -1,5 +1,5 @@
 <template>
-    <div class="products-view">
+    <div id="products-view" class="products-view">
         <ProductBox 
             v-for="product in products" :key="product.id" 
                 :name="product.name"
@@ -22,7 +22,6 @@ export default {
     mounted(){
         Api.getProducts().then(response => {
             this.products = response.data.data;
-            console.log(this.products[0].images[0].url);
         })
     },
 
@@ -45,5 +44,6 @@ export default {
         justify-items: center;
         align-items: center;
         grid-row-gap: 20px;
+        
     }
 </style>

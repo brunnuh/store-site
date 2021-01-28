@@ -1,5 +1,6 @@
 <template>
     <div class="product-box-view">
+       
         <img v-if="image != undefined" :src="image" alt="imagem do produto tal" />
         <img v-else :src="image" alt="imagem do produto tal" />
         <div class="details-product">
@@ -20,7 +21,7 @@ export default {
         image: String
     },
     mounted(){
-        console.log(this.image)
+     
     }
 }
 </script>
@@ -31,9 +32,13 @@ export default {
         flex-direction: column;
         height: 350px;
         width: 250px;
-        border: rgb(189, 185, 185) solid 1px;
+        border: transparent solid 1px;
+        transition: 0.6s;
+        border-radius: 10px;
         margin: 0 10px 0 10px;
         align-items: center;
+       box-shadow: 0 14px 28px rgba(94, 93, 93, 0.25);
+
 
         &:hover{
           border: rgb(0, 0, 0) solid 1px; 
@@ -51,7 +56,7 @@ export default {
             justify-content: center;
             align-items: center;
             .name{
-                font-size: 12px;
+                font-size: 16px;
                 font-weight: 600;
             }
             .price{
