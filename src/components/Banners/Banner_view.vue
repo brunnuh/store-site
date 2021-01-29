@@ -3,7 +3,6 @@
     <section id="part-header" class="banner-view">
      <h2>Mais Vendidos</h2>
         <div class="best-seller">
-            
              <strong  v-if="higlighted[0] != undefined" >{{higlighted[0][0].name.toUpperCase()}}</strong>
              <img v-if="higlighted[0] != undefined" :src="higlighted[0][0].images[0].url" :alt="higlighted[2][0].name">
         </div>
@@ -47,15 +46,15 @@
 </script>
 
 <style scoped lang="scss">
-
-    .banner-view{
+ 
+    .banner-view{ /** site full */
         grid-area: BB;
         display: grid;
-        grid-template-columns:  700px 600px;
+        grid-template-columns:  600px 600px;
         grid-template-rows: 60px auto;
         grid-template-areas: "H H" "BS AV";
         justify-content: center;
-        margin: 55px 0 55px 0;
+        margin: 250px 0 55px 0;
         grid-gap: 14px;
         
         h2{
@@ -64,12 +63,10 @@
             align-items: center;
             justify-content: center;
             font-weight: bolder;
-            color: var(--primary);
+            color: #007F5F;
             font-size: 50px;
         }
 
-      
-        
         .best-seller{
             padding: 20px 0;
             display: flex;
@@ -157,6 +154,87 @@
                 }
             }
         }
+    }
 
+   @media (max-width: 991px) { /** telas menores que 991px */
+        .banner-view{
+            display: flex;
+            flex-direction: column;
+            grid-gap: 0;
+            align-content: center;
+            justify-content: center;
+
+            h2{
+                display: flex;
+                flex-direction: column;
+                
+                font-weight: bolder;
+                color: #007F5F;
+                font-size: 30px;
+            }
+            .best-seller{
+                display: flex;
+                flex-direction: row-reverse;
+                max-width: 991px;
+                height: 150px;
+                
+                img{
+                    max-height: 130px;;
+                }
+                strong{
+                    display: block;
+                    font-size: 15px;
+                    font-weight: bolder;
+                    color: white;
+                }
+            }
+
+            .adverts-all{
+                display: flex;
+                flex-direction: column;
+                grid-gap: 0;
+                
+                .adverts-spotlight{
+                    max-width: 991px;
+                    height: 150px;
+                    img{
+                        max-height: 130px;;
+                    }
+                    strong{
+                        display: block;
+                        font-size: 15px;
+                        font-weight: bolder;
+                        color: white;
+                    }
+                }
+                .adverts-columns{
+                    display: flex;
+                    flex-direction: column;
+                    grid-gap: 0;
+                    .column-1{
+                        display: flex;
+                        height: 150px;
+                        flex-direction: row-reverse;
+                    }
+                    .column-2{
+                        display: flex;
+                        height: 150px;
+                        flex-direction: row;
+                    }
+                    .column-1, .column-2{
+                        
+                        img{
+                            max-height: 130px;;
+                        }
+                        strong{
+                            display: block;
+                            font-size: 15px;
+                            font-weight: bolder;
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
     }
 </style>

@@ -41,9 +41,30 @@ export default {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         margin: 0 230px;
-        justify-items: center;
+        justify-content: center;
         align-items: center;
         grid-row-gap: 20px;
         
+    }
+    @media (max-width: 991px) {
+        .products-view{
+            margin: 200px 0px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-items: center;
+            
+            grid-row-gap: 0px;
+        }
+        
+    }
+    @media (max-width: 990px) and (min-width: 600px){
+        .products-view{
+          
+            
+            grid-template-columns: 1fr 1fr 1fr;
+            justify-items: center;
+            
+            grid-row-gap: 0px;
+        }
     }
 </style>

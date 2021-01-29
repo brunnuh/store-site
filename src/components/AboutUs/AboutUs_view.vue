@@ -1,6 +1,6 @@
 <template>
     <section id="aboutus" class="aboutus-view">
-        <h2 class="title">
+        <h2 class="title" >
             Sobre
         </h2>
         <div class="content">
@@ -14,7 +14,18 @@
 
 <script>
 export default {
-
+   data() {
+       return {
+           red: 'red'
+       }
+   },
+   computed:{
+       cssProps(){
+           return {
+               'background-color': this.red
+           }
+       }
+   }
 }
 </script>
 
@@ -26,6 +37,7 @@ export default {
         align-items: center;
         flex-direction: column;
         margin: 0px 230px;
+      
          h2{
             font-size: 50px;
             margin-bottom: 50px;

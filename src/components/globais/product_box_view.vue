@@ -35,9 +35,9 @@ export default {
         border: transparent solid 1px;
         transition: 0.6s;
         border-radius: 10px;
-        margin: 0 10px 0 10px;
+        margin: 100px 10px 0 10px;
         align-items: center;
-       box-shadow: 0 14px 28px rgba(94, 93, 93, 0.25);
+        box-shadow: 0 14px 28px rgba(94, 93, 93, 0.25);
 
 
         &:hover{
@@ -65,6 +65,47 @@ export default {
             }
         }
     }
-
-   
+ 
+     @media (max-width: 991px) {
+        .product-box-view{
+            
+            max-height: 290px;
+            width: 168px;
+            
+            margin: 0;
+            
+            img{
+                margin: 20px 0px;
+                max-width: 80px;
+         
+            }
+            .details-product{
+                margin: 20px 0px;
+                display: flex;
+                flex-direction: column;
+                
+                
+                .name{
+                    white-space: nowrap;
+                    overflow: hidden;
+                    display: flex;
+                    width: 100%;
+                    justify-content: center;
+                   
+                    font-size: 12px;
+                    font-weight: 600;
+                    text-overflow: ellipsis;
+                }
+            }
+        }
+        
+    }
+    @media (max-width: 990px) and (min-width: 600px){
+        .product-box-view{
+            max-height: 290px;
+            width: 260px;
+            display: flex;
+            
+        }
+    }
 </style>

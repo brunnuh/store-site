@@ -3,7 +3,7 @@ import axios from 'axios';
 
 
 const http = axios.create({
-    baseURL: 'http://127.0.0.1:8000/api/'
+    baseURL: 'http://3bb0f1624a83.ngrok.io/api/'
 })
 
 export default{
